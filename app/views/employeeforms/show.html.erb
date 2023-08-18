@@ -1,0 +1,96 @@
+<head>
+<style>
+    table,th,td{
+        border: 1px solid;
+        border-collapse: collapse;
+        padding: 5px
+    }
+</style>
+</head>
+<center><h3>Employee Details</h3>
+<table>
+    <tr>
+    <th>First_name:</th>
+    <td><%=  @employeeform.first_name  %></td>
+    </tr>
+    
+    <tr>
+    <th>last_name:</th>
+    <td><%= @employeeform.last_name %></td>
+    </tr>
+    
+
+    <tr>
+    <th>DOB:</th>
+    <td><%= @employeeform.dob %></td>
+    </tr>
+    
+
+    <tr>
+    <th> Address:</th>
+    <td><%= @employeeform.address %></td>
+    </tr>
+    
+    
+    <tr>
+    <th>Phone_number:</th>
+    <td><%= @employeeform.phone_number %></td>
+    </tr>
+    
+
+    <tr>
+    <th>Email:</th>
+    <td><%= @employeeform.email %></td>
+    </tr>
+    
+
+    <tr>
+    <th>College:</th>
+    <td><%= @employeeform.college %></td>
+    </tr>
+    
+
+    <tr>
+    <th>Degree</th>
+    <td><%= @employeeform.degree %></td>
+    </tr>
+    
+
+    <tr>
+    <th>Stream:</th>
+    <td><%= @employeeform.stream %></td>
+    </tr>
+    
+
+    <tr>
+    <th>CGPA:</th>
+    <td><%= @employeeform.cgpa %></td>
+    </tr>
+    
+    
+    <tr>
+    <th>Experienced:</th>
+    <td><%= @employeeform.experienced %></td>
+    </tr>
+    
+
+    <tr>
+    <th> Marital_status:</th>
+    <td><%= @employeeform.marital_status %></td>
+    </tr>
+    
+</table>
+<table>
+    <tr>
+       <button style= "margin: 5px"> 
+       <%= link_to "Edit", edit_employeeform_path(@employeeform), style: "color: black; text-decoration: none; 
+       padding-left: 4px; padding-right: 4px; border-radius: 2px; margin: 5px" %></button>
+       
+         <%= button_to "Delete", @employeeform, method: :delete, data: {turbo_confirm: "Are you Sure?"}%>
+
+       <button style= "margin: 5px"> 
+       <%= link_to "Back", employeeforms_path, style: "color: black; text-decoration: none; 
+       padding-left: 4px; padding-right: 4px; border-radius: 2px; margin: 5px" %></button>
+    </tr>
+</table>     
+</center>

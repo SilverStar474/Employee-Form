@@ -1,0 +1,53 @@
+<head>
+<style>
+    table,th,td{
+        border: 1px solid;
+        border-collapse: collapse;
+        padding: 5px
+    }
+</style>
+</head>
+
+
+<center><h3>Employees List</h3>
+<button style="margin: 5px;">
+<%= link_to "Add New Employee", new_employeeform_path, style: "color: black; text-decoration: none; 
+       padding-left: 4px; padding-right: 4px; border-radius: 2px; margin: 5px" %></button>
+<table>
+
+    <tr>
+    <th>First_name</th>
+    <th>last_name</th>
+    <th>DOB</th>
+    <th> Address</th>
+    <th>Phone_number</th>
+    <th>Email</th>
+    <th>College</th>
+    <th>Degree</th>
+    <th>Stream</th>
+    <th>CGPA</th>
+    <th>Experienced</th>
+    <th> Marital_status</th>
+    </tr>
+ <% @employeeform.select do |employeeform|%>   
+    <tr>
+    
+        <td><%= employeeform.first_name %></td>
+        <td><%= employeeform.last_name %></td>
+        <td><%= employeeform.dob %></td>
+        <td><%= employeeform.address %></td>
+        <td><%= employeeform.phone_number %></td>
+        <td><%= employeeform.email %></td>
+        <td><%= employeeform.college %></td>
+        <td><%= employeeform.degree %></td>
+        <td><%= employeeform.stream %></td>
+        <td><%= employeeform.cgpa %></td>
+        <td><%= employeeform.experienced %></td>
+        <td><%= employeeform.marital_status %></td>
+        <td><%= link_to "Show", employeeform %></td>
+    </tr>
+    
+<% end %>
+    
+</table>
+</center>

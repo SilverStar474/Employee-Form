@@ -1,0 +1,91 @@
+
+<center>
+<%= form_with model: @employeeform do |form|%>
+<% if form.object.errors.any? %>
+    <div>
+        <% form.object.errors.full_messages.each do |message|%>
+            <ul style="color: red; list-style-type: none;">
+            <li><%= message %></li>
+            </ul>
+        <% end %>
+    </div>
+<% end %>
+<table>
+    <tr>
+    <th><%= form.label :first_name %></th>
+    <td><%= form.text_field :first_name %></td>
+    </tr>
+    
+    <tr>
+    <th><%= form.label :last_name %></th>
+    <td><%= form.text_field :last_name %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :dob %></th>
+    <td><%= form.date_field :dob %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :address %></th>
+    <td><%= form.text_area :address %></td>
+    </tr>
+    
+    
+    <tr>
+    <th><%= form.label :phone_number %></th>
+    <td><%= form.number_field :phone_number %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :email %></th>
+    <td><%= form.email_field :email %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :college %></th>
+    <td><%= form.text_field :college %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :degree %></th>
+    <td><%= form.text_field :degree %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :stream %></th>
+    <td><%= form.text_field :stream %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :cgpa %></th>
+    <td><%= form.text_field :cgpa %></td>
+    </tr>
+    
+    
+    <tr>
+    <th><%= form.label :experienced %></th>
+    <td><%= form.text_field :experienced %></td>
+    </tr>
+    
+
+    <tr>
+    <th><%= form.label :marital_status %></th>
+    <td><%= form.text_field :marital_status %></td>
+    </tr>
+    
+
+    <tr>
+        <th colspan="2"><%= form.button %></th>
+    </tr>
+ </table>   
+<% end %>
+
+</center>
